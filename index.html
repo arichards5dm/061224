@@ -1,0 +1,51 @@
+<DOCTYPE HTML>
+
+    <html>
+    
+    <head>
+        <title>Password Generator</title>
+    
+        <script>
+            const passchars="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*";
+            let numpasschars=passchars.length;
+            console.log(numpasschars);
+
+            function pgen(){
+                let numpchars = document.getElementById('val').value;
+                let counter=0;
+
+                while (counter < numpchars){
+
+                
+
+                    let random = Math.floor(Math.random()*100) % numpasschars;
+                    document.getElementById('partC').innerHTML+=passchars[random];
+                    counter=counter + 1;
+                }
+            }
+
+        </script>
+    
+    </head>
+    
+    <body>
+    
+    <div id="partA">
+        <button onclick ="pgen()">Generate Password!</button><br>
+        
+        <label for="val">Enter Value:</label>
+        <input type="text" id="val">
+    <br>
+    </div>
+    <div id="partB" style="display:block">
+        <h1>Generated Password</h1>
+        <hr>
+    </div>
+    <div id="partC" style="display:block">
+
+    </div>
+    
+    </body>
+    </html>
+
+

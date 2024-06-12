@@ -1,0 +1,72 @@
+<DOCTYPE HTML>
+
+    <html>
+    
+    <head>
+        <title>Experiments with JavaScript</title>
+    
+        <script>
+            console.log("Start of the page");
+
+            let myList=["Samsung", "Apple", "LG","Motorola"];
+            console.log(myList.length);
+
+            function a2l(){
+                let newmake = document.getElementById('val').value;
+                myList.push(newmake);
+                console.log(myList.length);
+                console.log(myList);
+            }
+
+            function getrandom(){
+                let rn = Math.floor(Math.random()*10);
+                document.getElementById('partC').innerHTML="<h1>"+rn+"</h1>";
+
+            }
+
+            function resettb(){
+                document.getElementById('val').value = "";
+                document.getElementById('val').focus();
+            }
+    
+            function show(){
+                let userinput=document.getElementById('val').value;
+                if (userinput == "123"){
+                    userinput = document.getElementById('partB').innerHTML="Secret Message for <h1>Andrew only</h1>";
+                } else if (userinput == "321"){
+                    userinput = document.getElementById('partB').innerHTML="Secret Message for <h1>BA?LM ▼•∙£─┘╡</h1>";
+                } 
+                else {
+                    userinput = document.getElementById('partB').innerHTML="<h1>የተሳሳተ ኮድ አደብ:)</h1>";
+                }
+            }
+           
+        </script>
+    
+    </head>
+    
+    <body>
+    
+    <div id="partA">
+        <h1>Causes</h1>
+        <button onclick ="show()">Please Don't Press!</button><br>
+        <button onclick="resettb()">Reset Text Box</button><br>
+        <button onclick="getrandom()">Get Random</button><br>
+        <button onclick="a2l()">Add to List</button><br>
+        <label for="val">Enter Value:</label>
+        <input type="text" id="val">
+    <br>
+    </div>
+    <div id="partB" style="display:block">
+        <br>
+        <h1>Effects</h1>
+        Surprise! Malware Injecting...
+    </div>
+    <div id="partC" style="display:block">
+
+    </div>
+    
+    </body>
+    </html>
+
+
